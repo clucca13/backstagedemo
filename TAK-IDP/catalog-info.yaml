@@ -1,0 +1,56 @@
+kind: Component
+spec:
+  type: Service
+  lifecycle: prod
+  owner: Field_Engineering
+  system: Platform_Demo
+  dependsOn:
+    - component:boutique-adservice
+    - component:boutique-checkoutservice
+    - component:boutique-currencyservice
+    - component:boutique-emailservice
+    - component:boutique-loadgenerator
+    - component:boutique-paymentservice
+    - component:boutique-productcatalogservice
+  providesApis:
+    - petstore
+    - starwars-graphql
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: TAK-IDP
+  description: Frontend for the TAK-IDP Project
+  links:
+    - url: http://34.67.7.165/
+      title: Prod Website
+      icon: dashboard
+      type: Boutique FrontEnd
+    - url: http://34.28.46.65
+      title: QA Website
+      icon: dashboard
+      type: Boutique FrontEnd
+    - url: http://34.135.60.81/
+      title: Dev Website
+      icon: dashboard
+      type: Boutique FrontEnd
+    - url: https://app.harness.io/ng/account/6_vVHzo9Qeu9fXvj-AcbCQ/module/sei/orgs/default/projects/SEIDemo/dashboards/13?OU=7&workspace_id=1&from=1706745600&to=1714521599
+      title: Dora Metrics
+      icon: dashboard
+      type: Boutique FrontEnd
+    - url: https://app.harness.io/ng/account/6_vVHzo9Qeu9fXvj-AcbCQ/module/cd/orgs/default/projects/Platform_Demo/pipelines/End_to_End_Commercial/deployments/Zfti1rw5QJCt9Dbp_-ZzOQ/tests
+      title: Testing Metrics
+      icon: dashboard
+      type: Boutique FrontEnd
+    - url: https://app.pluralsight.com/id?_gl=1*t8n96s*_ga*MTA1ODk3OTA0NC4xNzE2Mzg3MTE2*_ga_525M96C6Y1*MTcxNjQwNzY1OS4yLjAuMTcxNjQwNzY2MS41OC4wLjA.*_gcl_au*MTAxOTcxMTg3LjE3MTYzODcxMjA.&_ga=2.28218548.989823681.1716387120-1058979044.1716387116
+      title: Team Training Progress
+      icon: dashboard
+      type: Boutique FrontEnd
+  tags: 
+    - go
+  annotations:
+    harness.io/project-url: https://app.harness.io/ng/account/6_vVHzo9Qeu9fXvj-AcbCQ/home/orgs/default/projects/Platform_Demo/details
+    harness.io/cd-serviceId: Boutique_Frontend
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: wings-software/e2e-enterprise-demo
+    backstage.io/kubernetes-label-selector: 'backstage.io/kubernetes-id=boutique-frontend'
+    backstage.io/kubernetes-id: boutique-frontend
+    pagerduty.com/service-id: PGXMVMC
